@@ -726,6 +726,8 @@
             break;
           }
           case "bit-start-reveal": {
+            textDiv.style.opacity = 0;
+            setTimeout(() => textDiv.classList.add("hidden"), 200);
             startRevealingBits(msg.bitRemovalDuration);
             break;
           }
