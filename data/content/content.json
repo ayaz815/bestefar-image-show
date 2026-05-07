@@ -1,17 +1,137 @@
 {
-  "screen1": {
-    "question": "fgsd",
-    "answer": "sdfsd",
-    "firmNaming": "music"
-  },
-  "screen2": {
-    "question": "qwqw",
-    "answer": "wqq",
-    "firmNaming": "music"
-  },
-  "screen3": {
-    "question": "df",
-    "answer": "dsf",
-    "firmNaming": "music"
-  }
+  "quizName": "Animals",
+  "questions": [
+    {
+      "id": 1,
+      "type": "single",
+      "question": "Hvilket år ble Norge selvstendig?",
+      "image": "https://images.unsplash.com/photo-1526481280695-3c687fd5432c?auto=format&fit=crop&w=800&h=450",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      "answer": "1905",
+      "bgColor": "#000000",
+      "notes": "<h2>Norge selvstendig – 1905</h2><p>Norge oppnådde full selvstendighet fra Sverige den <strong>7. juni 1905</strong>.</p>"
+    },
+    {
+      "id": 2,
+      "type": "multiple",
+      "question": "Hva er hovedstaden i Frankrike?",
+      "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&h=450",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+      "answer": "Paris",
+      "options": ["London", "Paris", "Berlin"],
+      "bgColor": "#111111",
+      "notes": "<h2>Paris</h2><p>Paris er hovedstaden i Frankrike.</p>"
+    },
+    {
+      "id": 3,
+      "type": "bit",
+      "question": "Hvilken by er dette?",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/2/21/Oslo_May_2018.jpg",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+      "answer": "Oslo",
+      "bitSize": "4",
+      "bitRemovalDuration": "112",
+      "bgColor": "#222222",
+      "notes": "<h2>Oslo</h2><p>Bildet viser Oslo sentrum.</p>"
+    },
+    {
+      "id": 4,
+      "type": "single",
+      "question": "Hva er verdens høyeste fjell?",
+      "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&h=450",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+      "answer": "Mount Everest",
+      "bgColor": "#0d1b2a",
+      "notes": "<h2>Mount Everest</h2><p>Mount Everest er verdens høyeste fjell.</p>"
+    },
+    {
+      "id": 5,
+      "type": "multiple",
+      "question": "Hvem skrev Hamlet?",
+      "image": "https://images.unsplash.com/photo-1529655683826-aba9b3e77383?auto=format&fit=crop&w=800&h=450",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
+      "answer": "Shakespeare",
+      "options": ["Shakespeare", "Dickens", "Tolkien"],
+      "bgColor": "#1a1a1a",
+      "notes": "<h2>Hamlet</h2><p>Hamlet ble skrevet av William Shakespeare.</p>"
+    },
+    {
+      "id": 6,
+      "type": "bit",
+      "question": "Hvilket dyr er dette?",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/7/73/Lion_waiting_in_Namibia.jpg",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3",
+      "answer": "Løve",
+      "bitSize": "6",
+      "bitRemovalDuration": "192",
+      "bgColor": "#000000",
+      "notes": "<h2>Løve</h2><p>Løven kalles dyrenes konge.</p>"
+    },
+    {
+      "id": 7,
+      "type": "single",
+      "question": "Hva er det kjemiske symbolet for gull?",
+      "image": "https://images.unsplash.com/photo-1610375461246-83df859d849d?auto=format&fit=crop&w=800&h=450",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-7.mp3",
+      "answer": "Au",
+      "bgColor": "#ffffff",
+      "notes": "<h2>Gull</h2><p>Det kjemiske symbolet for gull er Au.</p>"
+    },
+    {
+      "id": 8,
+      "type": "multiple",
+      "question": "Hvilket år ble andre verdenskrig avsluttet?",
+      "image": "https://images.unsplash.com/photo-1541872705-1f73c6400ec9?auto=format&fit=crop&w=800&h=450",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-8.mp3",
+      "answer": "1945",
+      "options": ["1943", "1944", "1945"],
+      "bgColor": "#333333",
+      "notes": "<h2>Andre verdenskrig</h2><p>Krigen sluttet i 1945.</p>"
+    },
+    {
+      "id": 9,
+      "type": "bit",
+      "question": "Hvilken bygning er dette?",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-9.mp3",
+      "answer": "Eiffeltårnet",
+      "bitSize": "4",
+      "bitRemovalDuration": "192",
+      "bgColor": "#000000",
+      "notes": "<h2>Eiffeltårnet</h2><p>Eiffeltårnet ble ferdig i 1889.</p>"
+    },
+    {
+      "id": 10,
+      "type": "single",
+      "question": "Hvem var den første på månen?",
+      "image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&h=450",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-10.mp3",
+      "answer": "Neil Armstrong",
+      "bgColor": "#0a0a0a",
+      "notes": "<h2>Neil Armstrong</h2><p>Neil Armstrong var den første på månen.</p>"
+    },
+    {
+      "id": 11,
+      "type": "multiple",
+      "question": "Hva er Norges nasjonaldag?",
+      "image": "https://images.unsplash.com/photo-1520975916090-3105956dac38?auto=format&fit=crop&w=800&h=450",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-11.mp3",
+      "answer": "17. mai",
+      "options": ["1. januar", "17. mai", "25. desember"],
+      "bgColor": "#222222",
+      "notes": "<h2>Nasjonaldag</h2><p>Norges nasjonaldag er 17. mai.</p>"
+    },
+    {
+      "id": 12,
+      "type": "bit",
+      "question": "Hvilket kjent kunstverk er dette?",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/f/f4/The_Scream.jpg",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-12.mp3",
+      "answer": "Skrik",
+      "bitSize": "4",
+      "bitRemovalDuration": "112",
+      "bgColor": "#ffffff",
+      "notes": "<h2>Skrik</h2><p>Skrik ble malt av Edvard Munch.</p>"
+    }
+  ]
 }
