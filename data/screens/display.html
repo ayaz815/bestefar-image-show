@@ -228,6 +228,7 @@
         -webkit-box-orient: vertical;
         overflow: hidden;
         z-index: 10;
+        padding: 18px 28px;
       }
       #imageDiv {
         position: absolute;
@@ -407,7 +408,7 @@
           <div id="imageDiv" class="w-full h-full absolute top-0 left-0"></div>
           <div
             id="textDiv"
-            class="bg-black/70 p-5 text-white text-4xl mt-auto mb-auto cursor-pointer opacity-100 transition-opacity duration-300 z-10 text-center hidden"
+            class="opacity-100 transition-opacity duration-300 z-10 text-center"
           ></div>
           <div id="blackScreen"></div>
         </div>
@@ -719,8 +720,8 @@
             bitContainer.classList.remove("hidden");
             setBackgroundMedia(bitBackground, bitVideo, msg.image, msg.bgColor);
             textDiv.textContent = msg.question;
-            textDiv.classList.add("hidden");
-            textDiv.style.opacity = 0;
+            textDiv.classList.remove("hidden");
+            textDiv.style.opacity = 1;
             createGrid(msg.bitSize);
             break;
           }
