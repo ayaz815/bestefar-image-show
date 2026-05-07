@@ -1460,6 +1460,7 @@
           }, delay);
           revealTimeouts.push(id);
         });
+        broadcast({ action: "bit-accelerate" });
       }
       function toggleBitAnswer() {
         const q = questions[currentIndex];

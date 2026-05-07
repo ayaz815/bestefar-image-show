@@ -574,6 +574,23 @@
           revealTimeouts.push(id);
         });
       }
+      function accelerateBits() {
+        clearRevealTimeouts();
+        const remaining = shuffleArray(
+          pieces.filter((p) => parseFloat(p.style.opacity || "1") > 0)
+        );
+        const total = remaining.length;
+        if (total === 0) return;
+        const spreadMs = Math.min(total * 30, 800);
+        remaining.forEach((p, idx) => {
+          const delay = Math.round((idx / total) * spreadMs);
+          const id = setTimeout(() => {
+            p.style.transition = "opacity 120ms ease";
+            p.style.opacity = "0";
+          }, delay);
+          revealTimeouts.push(id);
+        });
+      }
       function smoothRevealAll() {
         clearRevealTimeouts();
         const shuffled = shuffleArray(pieces),
@@ -715,6 +732,10 @@
             revealAllPieces();
             break;
           }
+          case "bit-accelerate": {
+            accelerateBits();
+            break;
+          }
           case "bit-smooth-reveal": {
             smoothRevealAll();
             break;
@@ -739,18 +760,6 @@
 
       /* ── announce readiness to controller ── */
       bc.postMessage({ ready: true });
-
-      /* ── sync keyboard input back to controller ── */
-      document.addEventListener("keydown", (e) => {
-        // Forward Enter key presses to controller so it can handle bit reveals
-        if (e.key === "Enter") {
-          e.preventDefault();
-          bc.postMessage({
-            action: "display-enter-pressed",
-            key: "Enter",
-          });
-        }
-      });
 
       /* ── auto fullscreen ── */
       window.addEventListener("load", () => {
