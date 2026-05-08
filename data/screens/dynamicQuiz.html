@@ -909,31 +909,41 @@
         });
       });
 
-      /* ── OPEN DISPLAY WINDOW (invisible zone, bottom-center) ── */
+      /* ── OPEN DISPLAY WINDOW ── */
+      function openDisplayWindow() {
+        if (displayWindow && !displayWindow.closed) {
+          displayWindow.focus();
+          return;
+        }
+        displayWindow = window.open(
+          "display.html",
+          "QuizDisplay",
+          "width=1280,height=720,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,resizable=yes"
+        );
+        if (!displayWindow) {
+          alert("Popup blocked. Please allow popups for this page.");
+          return;
+        }
+        const poll = setInterval(() => {
+          if (displayWindow.closed) {
+            clearInterval(poll);
+            displayWindow = null;
+          }
+        }, 1000);
+      }
+
+      /* invisible tap zone */
       document
         .getElementById("open-display-zone")
-        .addEventListener("click", () => {
-          if (displayWindow && !displayWindow.closed) {
-            displayWindow.focus();
-            return;
-          }
-          displayWindow = window.open(
-            "display.html",
-            "QuizDisplay",
-            "width=1280,height=720,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,resizable=yes"
-          );
-          if (!displayWindow) {
-            alert("Popup blocked. Please allow popups for this page.");
-            return;
-          }
-          // Poll for close
-          const poll = setInterval(() => {
-            if (displayWindow.closed) {
-              clearInterval(poll);
-              displayWindow = null;
-            }
-          }, 1000);
-        });
+        .addEventListener("click", openDisplayWindow);
+
+      /* volume-up key (MediaVolumeUp or F12 as fallback) opens display */
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "AudioVolumeUp" || e.key === "VolumeUp") {
+          e.preventDefault();
+          openDisplayWindow();
+        }
+      });
 
       /* ── RECEIVE "ready" from display window, then sync current state ── */
       bc.onmessage = (e) => {
@@ -1707,6 +1717,15 @@
             ].includes(key)
           ) {
             e.preventDefault();
+          }
+
+          keysPressed[key] = true;
+
+          if (
+            (e.key === "ArrowLeft" && e.getModifierState("ArrowUp")) ||
+            (e.key === "ArrowUp" && e.getModifierState("ArrowLeft"))
+          ) {
+            document.getElementById("open-display-zone").click();
           }
 
           switch (key) {
