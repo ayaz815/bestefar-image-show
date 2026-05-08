@@ -132,6 +132,50 @@
       "bitRemovalDuration": "112",
       "bgColor": "#ffffff",
       "notes": "<h2>Skrik</h2><p>Skrik ble malt av Edvard Munch.</p>"
+    },
+    {
+      "id": 13,
+      "type": "single",
+      "question": "Hva er det største havet på jorden?",
+      "image": "https://images.unsplash.com/photo-1505118380757-91f5f5632de0?auto=format&fit=crop&w=800&h=450",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+      "answer": "Stillehavet",
+      "bgColor": "#001f3f",
+      "notes": "<h2>Stillehavet</h2><p>Stillehavet er det største og dypeste havet på jorden.</p>"
+    },
+    {
+      "id": 14,
+      "type": "multiple",
+      "question": "Hva er det raskeste dyret på land?",
+      "image": "https://images.unsplash.com/photo-1474511320723-9a56873867b5?auto=format&fit=crop&w=800&h=450",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
+      "answer": "Gepard",
+      "options": ["Løve", "Gepard", "Ørn"],
+      "bgColor": "#1a0a00",
+      "notes": "<h2>Gepard</h2><p>Geparden er det raskeste dyret på land og kan løpe opp til 120 km/t.</p>"
+    },
+    {
+      "id": 15,
+      "type": "bit",
+      "question": "Hvilket verdenskjent monument er dette?",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/10/Empire_State_Building_%28aerial_view%29.jpg",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
+      "answer": "Empire State Building",
+      "bitSize": "4",
+      "bitRemovalDuration": "112",
+      "bgColor": "#0a0a0a",
+      "notes": "<h2>Empire State Building</h2><p>Empire State Building ligger i New York og ble ferdigstilt i 1931.</p>"
+    },
+    {
+      "id": 16,
+      "type": "multiple",
+      "question": "Hvilket land har flest innbyggere?",
+      "image": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=800&h=450",
+      "audio": "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
+      "answer": "India",
+      "options": ["Kina", "India", "USA"],
+      "bgColor": "#0d0d0d",
+      "notes": "<h2>India</h2><p>India passerte Kina som verdens mest folkerike land i 2023.</p>"
     }
   ]
 }
